@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>
+
+
+<div class="justify-content-center align-items-center mt mb-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-3 offset-xl-3">
+            <div class="card shadow">
+                <img src="https://image.freepik.com/free-photo/camping-forest_1426-950.jpg" class="card-img-top"
+                    alt="Forest photo created by welcomia - www.freepik.com">
+                <div class="card-body">
+                    <h5 class="card-title">Register</h5>
+                    <form action="/register" class="validated-form" method="POST" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" required autofocus>
+                            <div class="invalid-feedback">
+                                Username cannot be blank
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Email cannot be blank
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="invalid-feedback">
+                                Password cannot be blank
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
