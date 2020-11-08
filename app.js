@@ -1,11 +1,11 @@
-if (process.env.NODE_ENV !=="production") {
-    require('dotenv').config();
-}
+// if (process.env.NODE_ENV !=="production") {
+//     require('dotenv').config();
+// }
 // Jp4LiJUwS8cuLrhO - mongo atlas password - 
 //mongodb+srv://first_project_user:<password>@cluster0.y4r6w.mongodb.net/<dbname>?retryWrites=true&w=majority
 // require('dotenv').config();
 
-process.env.NODE_ENV === "production";
+// process.env.NODE_ENV === "production";
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -25,7 +25,7 @@ const MongoStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-const { default: contentSecurityPolicy } = require('helmet/dist/middlewares/content-security-policy');
+// const { default: contentSecurityPolicy } = require('helmet/dist/middlewares/content-security-policy');
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelpcamp';
 mongoose.connect(dbUrl, {
