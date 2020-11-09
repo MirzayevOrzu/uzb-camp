@@ -76,7 +76,7 @@ map.on('load', function () {
         filter: ['!', ['has', 'point_count']],
         paint: {
             'circle-color': '#11b4da',
-            'circle-radius': 4,
+            'circle-radius': 6,//=>
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'
         }
@@ -90,12 +90,12 @@ map.on('load', function () {
         const clusterId = features[0].properties.cluster_id;
         map.getSource('campgrounds').getClusterExpansionZoom(
             clusterId,
-            function (err, zoom) {
+            function (err, 1) {
                 if (err) return;
 
                 map.easeTo({
                     center: features[0].geometry.coordinates,
-                    zoom: zoom
+                    zoom: 1//=>
                 });
             }
         );
